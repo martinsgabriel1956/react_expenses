@@ -19,9 +19,21 @@ export function ExpenseForm() {
     setEnteredDate(e.target.value);
   }
 
+  function handlerSubmit(e) {
+    e.preventDefault();
+
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      data: new Date(enteredDate)
+    }
+    
+    console.log(expenseData)
+  }
+
 
   return (
-    <form>
+    <form onSubmit={handlerSubmit}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>title</label>
