@@ -3,12 +3,16 @@ import React from 'react';
 import './style.css';
 
 export function ExpenseForm() {
+  function handlerTitleChange(e) {
+    console.log(e.target.value)
+  }
+
   return (
     <form>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>title</label>
-          <input type="text" />
+          <input type="text" onChange={handlerTitleChange} />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
