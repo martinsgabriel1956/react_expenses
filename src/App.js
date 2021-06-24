@@ -23,9 +23,15 @@ export function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  function handlerAddExpense(expense) {
+    console.log("In App");
+    console.log(expense);
+  }
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={handlerAddExpense} />
       <Expenses items={expenses}/>
     </div>
   );
