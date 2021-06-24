@@ -29,6 +29,9 @@ export function ExpenseForm() {
     }
     
     console.log(expenseData)
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
   }
 
 
@@ -37,15 +40,15 @@ export function ExpenseForm() {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>title</label>
-          <input type="text" onChange={handlerTitleChange} />
+          <input type="text" value={enteredTitle} onChange={handlerTitleChange} />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
-          <input type="number" min="0.01" step="0.01" onChange={handlerAmountChange} />
+          <input type="number" value={enteredAmount} min="0.01" step="0.01" onChange={handlerAmountChange} />
         </div>
         <div className="new-expense__control">
           <label>Date</label>
-          <input type="date" min="2019-01-01" max="2022-12-31" onChange={handlerDateChange} />
+          <input type="date" value={enteredDate} min="2019-01-01" max="2022-12-31" onChange={handlerDateChange} />
         </div>
       </div>
       <div className="new-expense__actions">
