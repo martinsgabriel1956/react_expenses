@@ -3,31 +3,20 @@ import React, { useState } from 'react'
 import './style.css';
 
 export function ExpenseForm() {
-  const [userInput, setUserInput] = useState({
-    enteredTitle: "",
-    enteredAmount: "",
-    enteredDate: "",
-  })
+  const [enteredTitle, setEnteredTitle] = useState('');
+  const [enteredAmount, setEnteredAmount] = useState(0);
+  const [enteredDate, setEnteredDate] = useState('');
 
   function handlerTitleChange(e) {
-    setUserInput({
-      ...userInput,
-      enteredTitle: e.target.value
-    })
+    setEnteredTitle(e.target.value)
   }
   
   function handlerAmountChange(e) {
-    setUserInput({
-      ...userInput,
-      enteredAmount: e.target.value
-    })
+    setEnteredAmount(e.target.value);
   }
   
   function handlerDateChange(e) {
-    setUserInput({
-      ...userInput,
-      enteredDate: e.target.value
-    })
+    setEnteredDate(e.target.value);
   }
 
 
