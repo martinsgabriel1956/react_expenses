@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { Expenses } from "./components/Expenses";
-import { NewExpense } from "./components/NewExpense/NewExpense";
+import { NewExpense } from "./components/NewExpense";
 
 const initialData = [
   {
