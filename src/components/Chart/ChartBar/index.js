@@ -3,7 +3,7 @@ import './styles.css';
 export function ChartBar(props) {
   let barFill = '0%';
 
-  if(props.max > 0) barFill = Math.round((props.value / props.maxValue) * 100);
+  if(props.maxValue > 0) barFill = Math.round((props.value / props.maxValue) * 100);
 
   return (
     <div className="chart-bar">
