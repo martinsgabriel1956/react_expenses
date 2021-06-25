@@ -34,6 +34,13 @@ export function ExpenseForm(props) {
     setEnteredDate('');
   }
 
+  function handleClearForm() {
+    props.onFormDisplay(false);
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
+  }
+
 
   return (
     <form onSubmit={handlerSubmit}>
@@ -52,6 +59,7 @@ export function ExpenseForm(props) {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="submit" onClick={handleClearForm}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>

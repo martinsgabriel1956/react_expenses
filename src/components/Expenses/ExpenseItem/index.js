@@ -7,7 +7,7 @@ import './style.css'
 
 export function ExpenseItem(props) {
   return (
-    <ul>
+    <li>
       <Card className='expense-item'>
         <ExpenseDate date={props.date} />
         <div className='expense-item__description'>
@@ -15,6 +15,6 @@ export function ExpenseItem(props) {
           <div className='expense-item__price'>${props.amount}</div>
         </div>
       </Card>
-    </ul>
+    </li>
   );
 }
